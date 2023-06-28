@@ -1,6 +1,6 @@
 https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/socks5.txt
 https://raw.githubusercontent.com/rdavydov/proxy-list/main/proxies_anonymous/socks5.txt
-https://raw.githubusercontent.com/mmpx12/proxy-list/master/socks5.txt"
+https://raw.githubusercontent.com/mmpx12/proxy-list/master/socks5.txt
 https://raw.githubusercontent.com/almroot/proxylist/master/list.txt
 https://raw.githubusercontent.com/sunny9577/proxy-scraper/master/proxies.txt
 https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-socks5.txt

@@ -81,6 +81,7 @@ def main():
     url = [input("Nhập vào link bạn muốn click: ") for _ in range(int(input("Nhập số lượng link: ")))]
     num_threads = int(input("Nhập số lượng luồng tối đa: "))
     delay = int(input("Nhập thời gian delay giữa các yêu cầu (giây): "))
+    max_successful_requests = int(input("Nhập số lượng yêu cầu thành công tối đa: "))
 
     if input("Bạn có muốn nhập file chứa link có proxy không? (y/n) ").lower() == "y":
         filename_http_links = input("Nhập vào tên tệp chứa link http proxy: ")
@@ -113,6 +114,9 @@ def main():
                 for future in futures:
                     if future.result():
                         successful_requests += 1
+                        if successful_requests >= max_successful_requests:
+                            print(f"Đã đạt đến số lượng yêu cầu thành công tối đa ({max_successful_requests}). Dừng chương trình.")
+                            return
                 used_proxies.append(proxy)
                 print(f"Used proxies: {len(used_proxies)}, Successful requests: {successful_requests}")
                 sleep(delay)  # Delay giữa các request để tránh bị block
