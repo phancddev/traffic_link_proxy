@@ -30,10 +30,13 @@ def get_proxies_from_links_file(filename):
             basename = os.path.basename(parsed_link.path)
             if basename:
                 local_filename = os.path.join(tempfile.gettempdir(), basename)
-                download_file(link, local_filename)
-                new_proxies = get_proxies(local_filename)
-                proxies.extend(new_proxies)
-                print(f"Đã tải về {len(new_proxies)} proxy từ {link}")
+                try:
+                    download_file(link, local_filename)
+                    new_proxies = get_proxies(local_filename)
+                    proxies.extend(new_proxies)
+                    print(f"Đã tải về {len(new_proxies)} proxy từ {link}")
+                except requests.exceptions.RequestException as e:
+                    print(f"Không thể truy cập vào {link}: {str(e)}")
             else:
                 print(f"Không thể tải tệp từ {link} do không có tên tệp.")
     return proxies
@@ -77,7 +80,8 @@ def send_request_socks5(url, proxy):
 def main():
     url = [input("Nhập vào link bạn muốn click: ") for _ in range(int(input("Nhập số lượng link: ")))]
     num_threads = int(input("Nhập số lượng luồng tối đa: "))
-    
+    delay = int(input("Nhập thời gian delay giữa các yêu cầu (giây): "))
+
     if input("Bạn có muốn nhập file chứa link có proxy không? (y/n) ").lower() == "y":
         filename_http_links = input("Nhập vào tên tệp chứa link http proxy: ")
         filename_socks4_links = input("Nhập vào tên tệp chứa link socks4 proxy: ")
@@ -111,7 +115,7 @@ def main():
                         successful_requests += 1
                 used_proxies.append(proxy)
                 print(f"Used proxies: {len(used_proxies)}, Successful requests: {successful_requests}")
-                sleep(1)  # Delay giữa các request để tránh bị block
+                sleep(delay)  # Delay giữa các request để tránh bị block
         proxies_http = [p for p in proxies_http if p not in used_proxies]
         proxies_socks4 = [p for p in proxies_socks4 if p not in used_proxies]
         proxies_socks5 = [p for p in proxies_socks5 if p not in used_proxies]
