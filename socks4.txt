@@ -1,3 +1,5 @@
+https://raw.githubusercontent.com/officialputuid/KangProxy/KangProxy/socks4/socks4.txt
+https://github.com/prxchk/proxy-list/blob/main/socks4.txt
 https://api.proxyscrape.com/?request=getproxies&proxytype=socks4&timeout=10000&country=all
 https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/socks4.txt
 https://raw.githubusercontent.com/rdavydov/proxy-list/main/proxies_anonymous/socks4.txt
