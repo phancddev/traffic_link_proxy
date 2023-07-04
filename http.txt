@@ -1,12 +1,4 @@
 https://premiumproxy.net/http-proxy-list
-https://www.proxyscan.io/download?type=http
-https://www.proxyscan.io/download?type=https
-https://www.proxy-list.download/HTTPS
-http://free-proxy.cz/en/proxylist/country/all/https/ping/all
-http://31f.cn/http-proxy/
-http://31f.cn/https-proxy/
-http://bestblackhatforum.com/Forum-Proxies-and-VPN-Section
-http://base.4rumer.com/f18-http-proxy
 https://raw.githubusercontent.com/HyperBeats/proxy-list/main/http.txt
 https://raw.githubusercontent.com/UptimerBot/proxy-list/main/proxies/http.txt
 https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/http.txt
