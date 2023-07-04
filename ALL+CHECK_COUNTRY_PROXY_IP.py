@@ -33,6 +33,7 @@ def is_proxy_working(url, proxy):
         return True
     except Exception as e:
         logging.error(f"Failed to send request with proxy {proxy}. Reason: {e}")
+        logging.info(f"Used proxies: {len(used_proxies)}, Successful requests: {successful_requests}")
         return False
 
 def download_file(url, local_filename):
@@ -73,18 +74,37 @@ def save_unused_proxies(filename, proxies):
         for proxy in proxies:
             f.write(f"{proxy}\n")
 
-def send_request(url, proxy):
+def send_request(url, proxies, proxy):
     try:
-        proxies = {
-            "http": proxy,
-            "https": proxy
-        }
         response = requests.get(url, proxies=proxies, timeout=5)
         logging.info(f"Request sent to {url} with proxy {proxy}")
+        logging.info(f"Used proxies: {len(used_proxies)}, Successful requests: {successful_requests}")
         return True
     except Exception as e:
         logging.error(f"Failed to send request with proxy {proxy}. Reason: {e}")
+        logging.info(f"Used proxies: {len(used_proxies)}, Successful requests: {successful_requests}")
         return False
+
+def send_request_http(url, proxy):
+    proxies = {
+        "http": proxy,
+        "https": proxy
+    }
+    return send_request(url, proxies, proxy)
+
+def send_request_socks4(url, proxy):
+    proxies = {
+        "http": "socks4://" + proxy,
+        "https": "socks4://" + proxy
+    }
+    return send_request(url, proxies, proxy)
+
+def send_request_socks5(url, proxy):
+    proxies = {
+        "http": "socks5://" + proxy,
+        "https": "socks5://" + proxy
+    }
+    return send_request(url, proxies, proxy)
 
 def main():
     setup_logging()
@@ -134,11 +154,11 @@ def main():
                     logging.info(f"Proxy {proxy} không hoạt động. Bỏ qua...")
                     continue
                 if proxy_type == 0:  # http proxy
-                    futures = [executor.submit(send_request, u, proxy) for u in url]
+                    futures = [executor.submit(send_request_http, u, proxy) for u in url]
                 elif proxy_type == 1:  # socks4 proxy
-                    futures = [executor.submit(send_request, u, proxy) for u in url]
+                    futures = [executor.submit(send_request_socks4, u, proxy) for u in url]
                 else:  # socks5 proxy
-                    futures = [executor.submit(send_request, u, proxy) for u in url]
+                    futures = [executor.submit(send_request_socks5, u, proxy) for u in url]
                 for future in futures:
                     if future.result():
                         successful_requests += 1
@@ -160,6 +180,7 @@ def main():
     save_unused_proxies(filename_http, proxies_http)
     save_unused_proxies(filename_socks4, proxies_socks4)
     save_unused_proxies(filename_socks5, proxies_socks5)
+
 
 if __name__ == "__main__":
     main()
