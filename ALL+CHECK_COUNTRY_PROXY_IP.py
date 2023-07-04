@@ -6,8 +6,10 @@ from time import sleep
 from urllib.parse import urlparse
 from concurrent.futures import ThreadPoolExecutor
 
+
 def setup_logging():
     logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+
 
 def get_country_info(ip):
     try:
@@ -23,19 +25,6 @@ def get_country_info(ip):
         return None, None
 
 
-def is_proxy_working(url, proxy):
-    try:
-        proxies = {
-            "http": proxy,
-            "https": proxy
-        }
-        response = requests.get(url, proxies=proxies, timeout=5)
-        return True
-    except Exception as e:
-        logging.error(f"Failed to send request with proxy {proxy}. Reason: {e}")
-        logging.info(f"Used proxies: {len(used_proxies)}, Successful requests: {successful_requests}")
-        return False
-
 def download_file(url, local_filename):
     with requests.get(url, stream=True) as r:
         r.raise_for_status()
@@ -44,10 +33,12 @@ def download_file(url, local_filename):
                 f.write(chunk)
     return local_filename
 
+
 def get_proxies(filename):
     with open(filename, "r", encoding="utf-8") as f:
         proxies = [line.strip() for line in f.readlines()]
     return proxies
+
 
 def get_proxies_from_links_file(filename):
     proxies = []
@@ -69,10 +60,12 @@ def get_proxies_from_links_file(filename):
                 logging.error(f"Không thể tải tệp từ {link} do không có tên tệp.")
     return proxies
 
+
 def save_unused_proxies(filename, proxies):
     with open(filename, "w") as f:
         for proxy in proxies:
             f.write(f"{proxy}\n")
+
 
 def send_request(url, proxies, proxy):
     try:
@@ -85,12 +78,14 @@ def send_request(url, proxies, proxy):
         logging.info(f"Used proxies: {len(used_proxies)}, Successful requests: {successful_requests}")
         return False
 
+
 def send_request_http(url, proxy):
     proxies = {
         "http": proxy,
         "https": proxy
     }
     return send_request(url, proxies, proxy)
+
 
 def send_request_socks4(url, proxy):
     proxies = {
@@ -99,6 +94,7 @@ def send_request_socks4(url, proxy):
     }
     return send_request(url, proxies, proxy)
 
+
 def send_request_socks5(url, proxy):
     proxies = {
         "http": "socks5://" + proxy,
@@ -106,7 +102,10 @@ def send_request_socks5(url, proxy):
     }
     return send_request(url, proxies, proxy)
 
+
 def main():
+    global used_proxies
+    global successful_requests
     setup_logging()
 
     url = [input("Nhập vào link bạn muốn click: ") for _ in range(int(input("Nhập số lượng link: ")))]
@@ -150,21 +149,23 @@ def main():
                 if specific_countries is not None and country_code not in specific_countries:
                     logging.info(f"Proxy {proxy} không phải là của {'/'.join(specific_countries)}. Nó thuộc quốc gia {country}. Bỏ qua...")
                     continue
-                if not is_proxy_working(url[0], proxy):
-                    logging.info(f"Proxy {proxy} không hoạt động. Bỏ qua...")
-                    continue
+
                 if proxy_type == 0:  # http proxy
                     futures = [executor.submit(send_request_http, u, proxy) for u in url]
                 elif proxy_type == 1:  # socks4 proxy
                     futures = [executor.submit(send_request_socks4, u, proxy) for u in url]
                 else:  # socks5 proxy
                     futures = [executor.submit(send_request_socks5, u, proxy) for u in url]
+
                 for future in futures:
                     if future.result():
                         successful_requests += 1
                         if successful_requests >= max_successful_requests:
                             logging.info(f"Đã đạt đến số lượng yêu cầu thành công tối đa ({max_successful_requests}). Dừng chương trình.")
                             return
+                    else:
+                        logging.info(f"Failed to send request with proxy {proxy}. Bỏ qua...")
+                        continue
                 used_proxies.append(proxy)
                 if country_code and country:
                     logging.info(f"Proxy {proxy} thuộc quốc gia {country} ({country_code})")
@@ -173,13 +174,13 @@ def main():
                 logging.info(f"Used proxies: {len(used_proxies)}, Successful requests: {successful_requests}")
                 sleep(delay)
 
-    proxies_http = [p for p in proxies_http if p not in used_proxies]
-    proxies_socks4 = [p for p in proxies_socks4 if p not in used_proxies]
-    proxies_socks5 = [p for p in proxies_socks5 if p not in used_proxies]
+        proxies_http = [p for p in proxies_http if p not in used_proxies]
+        proxies_socks4 = [p for p in proxies_socks4 if p not in used_proxies]
+        proxies_socks5 = [p for p in proxies_socks5 if p not in used_proxies]
 
-    save_unused_proxies(filename_http, proxies_http)
-    save_unused_proxies(filename_socks4, proxies_socks4)
-    save_unused_proxies(filename_socks5, proxies_socks5)
+        save_unused_proxies(filename_http, proxies_http)
+        save_unused_proxies(filename_socks4, proxies_socks4)
+        save_unused_proxies(filename_socks5, proxies_socks5)
 
 
 if __name__ == "__main__":
