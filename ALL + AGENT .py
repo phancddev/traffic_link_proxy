@@ -5,7 +5,8 @@ import logging
 from time import sleep
 from urllib.parse import urlparse
 from concurrent.futures import ThreadPoolExecutor
-
+from fake_useragent import UserAgent
+ua = UserAgent()
 
 def setup_logging():
     logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
@@ -69,8 +70,12 @@ def save_unused_proxies(filename, proxies):
 
 def send_request(url, proxies, proxy):
     try:
-        response = requests.get(url, proxies=proxies, timeout=5)
-        logging.info(f"Request sent to {url} with proxy {proxy}")
+        user_agent = ua.random
+        headers = {
+            "User-Agent": user_agent
+        }
+        response = requests.get(url, proxies=proxies, headers=headers, timeout=5)
+        logging.info(f"Request sent to {url} with proxy {proxy} using User-Agent: {user_agent}")
         logging.info(f"Used proxies: {len(used_proxies)}, Successful requests: {successful_requests}")
         return True
     except Exception as e:
