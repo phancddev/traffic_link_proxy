@@ -1,4 +1,3 @@
-https://premiumproxy.net/http-proxy-list
 https://raw.githubusercontent.com/HyperBeats/proxy-list/main/http.txt
 https://raw.githubusercontent.com/HyperBeats/proxy-list/main/https.txt
 https://raw.githubusercontent.com/UptimerBot/proxy-list/main/proxies/http.txt
