@@ -1,5 +1,6 @@
 https://premiumproxy.net/http-proxy-list
 https://raw.githubusercontent.com/HyperBeats/proxy-list/main/http.txt
+https://raw.githubusercontent.com/HyperBeats/proxy-list/main/https.txt
 https://raw.githubusercontent.com/UptimerBot/proxy-list/main/proxies/http.txt
 https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/http.txt
 https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/https.txt
@@ -15,7 +16,6 @@ https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/prox
 https://raw.githubusercontent.com/hookzof/socks5_list/master/proxy.txt
 https://raw.githubusercontent.com/roosterkid/openproxylist/main/HTTPS_RAW.txt
 https://raw.githubusercontent.com/mertguvencli/http-proxy-list/main/proxy-list/data.txt
-https://raw.githubusercontent.com/HyperBeats/proxy-list/main/http.txt
 https://raw.githubusercontent.com/RX4096/proxy-list/main/online/https.txt
 https://raw.githubusercontent.com/monosans/proxy-list/main/proxies_anonymous/http.txt
 https://raw.githubusercontent.com/mmpx12/proxy-list/master/http.txt
