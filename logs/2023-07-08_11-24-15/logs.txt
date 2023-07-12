@@ -1,0 +1,79 @@
+2023-07-08 11:24:28,439 [INFO] Đã tải về 1381 proxy từ https://raw.githubusercontent.com/HyperBeats/proxy-list/main/http.txt
+2023-07-08 11:24:28,846 [INFO] Đã tải về 780 proxy từ https://raw.githubusercontent.com/HyperBeats/proxy-list/main/https.txt
+2023-07-08 11:24:29,064 [INFO] Đã tải về 565 proxy từ https://raw.githubusercontent.com/UptimerBot/proxy-list/main/proxies/http.txt
+2023-07-08 11:24:29,279 [INFO] Đã tải về 59 proxy từ https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/http.txt
+2023-07-08 11:24:30,213 [INFO] Đã tải về 43 proxy từ https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/https.txt
+2023-07-08 11:24:30,441 [INFO] Đã tải về 193 proxy từ https://raw.githubusercontent.com/prxchk/proxy-list/main/http.txt
+2023-07-08 11:24:30,686 [INFO] Đã tải về 6254 proxy từ https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt
+2023-07-08 11:24:31,134 [INFO] Đã tải về 190 proxy từ https://raw.githubusercontent.com/rdavydov/proxy-list/main/proxies_anonymous/http.txt
+2023-07-08 11:24:31,335 [INFO] Đã tải về 537 proxy từ https://raw.githubusercontent.com/mmpx12/proxy-list/master/http.txt
+2023-07-08 11:24:31,545 [INFO] Đã tải về 299 proxy từ https://raw.githubusercontent.com/mmpx12/proxy-list/master/https.txt
+2023-07-08 11:24:31,788 [INFO] Đã tải về 419 proxy từ https://raw.githubusercontent.com/almroot/proxylist/master/list.txt
+2023-07-08 11:24:32,274 [INFO] Đã tải về 5690 proxy từ https://raw.githubusercontent.com/sunny9577/proxy-scraper/master/proxies.txt
+2023-07-08 11:24:32,527 [INFO] Đã tải về 1801 proxy từ https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-http.txt
+2023-07-08 11:24:32,772 [INFO] Đã tải về 2161 proxy từ https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-https.txt
+2023-07-08 11:24:32,985 [INFO] Đã tải về 268 proxy từ https://raw.githubusercontent.com/hookzof/socks5_list/master/proxy.txt
+2023-07-08 11:24:33,210 [INFO] Đã tải về 139 proxy từ https://raw.githubusercontent.com/roosterkid/openproxylist/main/HTTPS_RAW.txt
+2023-07-08 11:24:33,587 [INFO] Đã tải về 470 proxy từ https://raw.githubusercontent.com/mertguvencli/http-proxy-list/main/proxy-list/data.txt
+2023-07-08 11:24:34,077 [ERROR] Không thể truy cập vào https://raw.githubusercontent.com/RX4096/proxy-list/main/online/https.txt: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/RX4096/proxy-list/main/online/https.txt
+2023-07-08 11:24:34,516 [INFO] Đã tải về 177 proxy từ https://raw.githubusercontent.com/monosans/proxy-list/main/proxies_anonymous/http.txt
+2023-07-08 11:24:34,958 [INFO] Đã tải về 537 proxy từ https://raw.githubusercontent.com/mmpx12/proxy-list/master/http.txt
+2023-07-08 11:24:35,431 [INFO] Đã tải về 299 proxy từ https://raw.githubusercontent.com/mmpx12/proxy-list/master/https.txt
+2023-07-08 11:24:35,431 [ERROR] Không thể tải tệp từ https://api.proxyscrape.com/v2/?request=getproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all do không có tên tệp.
+2023-07-08 11:24:35,866 [INFO] Đã tải về 2849 proxy từ https://raw.githubusercontent.com/officialputuid/KangProxy/KangProxy/http/http.txt
+2023-07-08 11:24:36,293 [INFO] Đã tải về 5756 proxy từ https://raw.githubusercontent.com/officialputuid/KangProxy/KangProxy/https/https.txt
+2023-07-08 11:24:36,522 [INFO] Đã tải về 2253 proxy từ https://raw.githubusercontent.com/ObcbO/getproxy/master/https.txt
+2023-07-08 11:24:36,999 [INFO] Đã tải về 6438 proxy từ https://raw.githubusercontent.com/officialputuid/KangProxy/KangProxy/socks4/socks4.txt
+2023-07-08 11:24:37,219 [INFO] Đã tải về 146 proxy từ https://raw.githubusercontent.com/prxchk/proxy-list/main/socks4.txt
+2023-07-08 11:24:37,219 [ERROR] Không thể tải tệp từ https://api.proxyscrape.com/?request=getproxies&proxytype=socks4&timeout=10000&country=all do không có tên tệp.
+2023-07-08 11:24:37,434 [INFO] Đã tải về 644 proxy từ https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/socks4.txt
+2023-07-08 11:24:37,949 [INFO] Đã tải về 106 proxy từ https://raw.githubusercontent.com/rdavydov/proxy-list/main/proxies_anonymous/socks4.txt
+2023-07-08 11:24:38,170 [INFO] Đã tải về 906 proxy từ https://raw.githubusercontent.com/mmpx12/proxy-list/master/socks4.txt
+2023-07-08 11:24:38,575 [INFO] Đã tải về 419 proxy từ https://raw.githubusercontent.com/almroot/proxylist/master/list.txt
+2023-07-08 11:24:39,033 [INFO] Đã tải về 5690 proxy từ https://raw.githubusercontent.com/sunny9577/proxy-scraper/master/proxies.txt
+2023-07-08 11:24:39,247 [INFO] Đã tải về 1603 proxy từ https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-socks4.txt
+2023-07-08 11:24:39,794 [INFO] Đã tải về 7725 proxy từ https://raw.githubusercontent.com/ObcbO/getproxy/master/socks4.txt
+2023-07-08 11:24:40,007 [INFO] Đã tải về 268 proxy từ https://raw.githubusercontent.com/hookzof/socks5_list/master/proxy.txt
+2023-07-08 11:24:40,240 [INFO] Đã tải về 395 proxy từ https://raw.githubusercontent.com/roosterkid/openproxylist/main/SOCKS4_RAW.txt
+2023-07-08 11:24:40,730 [INFO] Đã tải về 470 proxy từ https://raw.githubusercontent.com/mertguvencli/http-proxy-list/main/proxy-list/data.txt
+2023-07-08 11:24:40,939 [INFO] Đã tải về 1015 proxy từ https://raw.githubusercontent.com/HyperBeats/proxy-list/main/socks4.txt
+2023-07-08 11:24:41,190 [INFO] Đã tải về 5746 proxy từ https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt
+2023-07-08 11:24:41,407 [INFO] Đã tải về 601 proxy từ https://raw.githubusercontent.com/UptimerBot/proxy-list/main/proxies/socks4.txt
+2023-07-08 11:24:41,883 [INFO] Đã tải về 65 proxy từ https://raw.githubusercontent.com/monosans/proxy-list/main/proxies_anonymous/socks4.txt
+2023-07-08 11:24:42,110 [INFO] Đã tải về 906 proxy từ https://raw.githubusercontent.com/mmpx12/proxy-list/master/socks4.txt
+2023-07-08 11:24:42,338 [INFO] Đã tải về 253 proxy từ https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/socks5.txt
+2023-07-08 11:24:42,778 [INFO] Đã tải về 17 proxy từ https://raw.githubusercontent.com/rdavydov/proxy-list/main/proxies_anonymous/socks5.txt
+2023-07-08 11:24:42,984 [INFO] Đã tải về 15 proxy từ https://raw.githubusercontent.com/prxchk/proxy-list/main/socks5.txt
+2023-07-08 11:24:43,205 [INFO] Đã tải về 253 proxy từ https://raw.githubusercontent.com/mmpx12/proxy-list/master/socks5.txt
+2023-07-08 11:24:43,523 [INFO] Đã tải về 18831 proxy từ https://raw.githubusercontent.com/officialputuid/KangProxy/KangProxy/socks5/socks5.txt
+2023-07-08 11:24:43,743 [INFO] Đã tải về 419 proxy từ https://raw.githubusercontent.com/almroot/proxylist/master/list.txt
+2023-07-08 11:24:43,981 [INFO] Đã tải về 5690 proxy từ https://raw.githubusercontent.com/sunny9577/proxy-scraper/master/proxies.txt
+2023-07-08 11:24:44,218 [INFO] Đã tải về 405 proxy từ https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-socks5.txt
+2023-07-08 11:24:44,740 [INFO] Đã tải về 6508 proxy từ https://raw.githubusercontent.com/ObcbO/getproxy/master/socks5.txt
+2023-07-08 11:24:45,228 [INFO] Đã tải về 248 proxy từ https://raw.githubusercontent.com/hookzof/socks5_list/master/proxy.txt
+2023-07-08 11:24:45,434 [INFO] Đã tải về 139 proxy từ https://raw.githubusercontent.com/roosterkid/openproxylist/main/HTTPS_RAW.txt
+2023-07-08 11:24:45,663 [INFO] Đã tải về 395 proxy từ https://raw.githubusercontent.com/roosterkid/openproxylist/main/SOCKS5_RAW.txt
+2023-07-08 11:24:45,881 [INFO] Đã tải về 470 proxy từ https://raw.githubusercontent.com/mertguvencli/http-proxy-list/main/proxy-list/data.txt
+2023-07-08 11:24:46,092 [INFO] Đã tải về 170 proxy từ https://raw.githubusercontent.com/HyperBeats/proxy-list/main/socks5.txt
+2023-07-08 11:24:46,561 [INFO] Đã tải về 405 proxy từ https://raw.githubusercontent.com/manuGMG/proxy-365/main/SOCKS5.txt
+2023-07-08 11:24:46,831 [INFO] Đã tải về 5032 proxy từ https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt
+2023-07-08 11:24:47,046 [INFO] Đã tải về 183 proxy từ https://raw.githubusercontent.com/UptimerBot/proxy-list/main/proxies/socks5.txt
+2023-07-08 11:24:47,245 [INFO] Đã tải về 24 proxy từ https://raw.githubusercontent.com/monosans/proxy-list/main/proxies_anonymous/socks5.txt
+2023-07-08 11:24:47,635 [INFO] Đã tải về 253 proxy từ https://raw.githubusercontent.com/mmpx12/proxy-list/master/socks5.txt
+2023-07-08 11:24:47,635 [ERROR] Không thể tải tệp từ https://api.proxyscrape.com/v2/?request=getproxies&protocol=socks5&timeout=10000&country=all do không có tên tệp.
+2023-07-08 11:24:57,111 [INFO] Proxy  không hợp lệ. Bỏ qua...
+2023-07-08 11:24:57,556 [INFO] Proxy 222.209.81.12:10800 không phải là của US. Nó thuộc quốc gia China. Bỏ qua...
+2023-07-08 11:24:57,921 [INFO] Proxy 222.188.84.2:1080 không phải là của US. Nó thuộc quốc gia China. Bỏ qua...
+2023-07-08 11:24:57,926 [INFO] Proxy  không hợp lệ. Bỏ qua...
+2023-07-08 11:24:58,299 [INFO] Proxy 222.209.81.12:10800 không phải là của US. Nó thuộc quốc gia China. Bỏ qua...
+2023-07-08 11:24:58,790 [INFO] Proxy 222.188.84.2:1080 không phải là của US. Nó thuộc quốc gia China. Bỏ qua...
+2023-07-08 11:24:58,798 [INFO] Proxy  không hợp lệ. Bỏ qua...
+2023-07-08 11:24:59,168 [INFO] Proxy 222.209.81.12:10800 không phải là của US. Nó thuộc quốc gia China. Bỏ qua...
+2023-07-08 11:24:59,607 [INFO] Proxy 222.188.84.2:1080 không phải là của US. Nó thuộc quốc gia China. Bỏ qua...
+2023-07-08 11:24:59,617 [INFO] Proxy  không hợp lệ. Bỏ qua...
+2023-07-08 11:25:00,052 [INFO] Proxy 222.209.81.12:10800 không phải là của US. Nó thuộc quốc gia China. Bỏ qua...
+2023-07-08 11:25:00,430 [INFO] Proxy 222.188.84.2:1080 không phải là của US. Nó thuộc quốc gia China. Bỏ qua...
+2023-07-08 11:25:00,434 [INFO] Proxy  không hợp lệ. Bỏ qua...
+2023-07-08 11:25:00,844 [INFO] Proxy 222.209.81.12:10800 không phải là của US. Nó thuộc quốc gia China. Bỏ qua...
+2023-07-08 11:25:01,295 [INFO] Proxy 222.188.84.2:1080 không phải là của US. Nó thuộc quốc gia China. Bỏ qua...
+2023-07-08 11:25:01,300 [INFO] Proxy  không hợp lệ. Bỏ qua...
