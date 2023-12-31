@@ -12,7 +12,7 @@ def setup_logging():
     logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 
 
-def get_country_info(ip):
+def get_country_info(ip):   
     try:
         response = requests.get(f"http://ip-api.com/json/{ip}")
         data = response.json()
@@ -68,12 +68,20 @@ def save_unused_proxies(filename, proxies):
             f.write(f"{proxy}\n")
 
 
-def send_request(url, proxies, proxy):
+def send_request(url, proxies, proxy, username=None, password=None):
     try:
         user_agent = ua.random
         headers = {
             "User-Agent": user_agent
         }
+        proxy_parts = proxy.split(":")
+        if len(proxy_parts) == 4:
+            ip, port, proxy_username, proxy_password = proxy_parts
+            proxies = {
+                "http": f"http://{proxy_username}:{proxy_password}@{ip}:{port}",
+                "https": f"http://{proxy_username}:{proxy_password}@{ip}:{port}"
+            }
+        
         response = requests.get(url, proxies=proxies, headers=headers, timeout=5)
         logging.info(f"Request sent to {url} with proxy {proxy} using User-Agent: {user_agent}")
         logging.info(f"Used proxies: {len(used_proxies)}, Successful requests: {successful_requests}")
@@ -82,6 +90,7 @@ def send_request(url, proxies, proxy):
         logging.error(f"Failed to send request with proxy {proxy}. Reason: {e}")
         logging.info(f"Used proxies: {len(used_proxies)}, Successful requests: {successful_requests}")
         return False
+
 
 
 def send_request_http(url, proxy):
@@ -117,6 +126,8 @@ def main():
     num_threads = int(input("Nhập số lượng luồng tối đa: "))
     delay = int(input("Nhập thời gian delay giữa các yêu cầu (giây): "))
     max_successful_requests = int(input("Nhập số lượng yêu cầu thành công tối đa: "))
+    use_credentials = input("Bạn có muốn sử dụng tên người dùng và mật khẩu từ tệp proxy không? (y/n) ").lower() == "y"
+
 
     if input("Bạn có muốn nhập file chứa link có proxy không? (y/n) ").lower() == "y":
         filename_http_links = input("Nhập vào tên tệp chứa link http proxy: ")
@@ -156,7 +167,7 @@ def main():
                     continue
 
                 if proxy_type == 0:  # http proxy
-                    futures = [executor.submit(send_request_http, u, proxy) for u in url]
+                    futures = [executor.submit(send_request_http, u, proxy ) for u in url]
                 elif proxy_type == 1:  # socks4 proxy
                     futures = [executor.submit(send_request_socks4, u, proxy) for u in url]
                 else:  # socks5 proxy
