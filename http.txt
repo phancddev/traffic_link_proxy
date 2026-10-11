@@ -23,3 +23,4 @@ https://api.proxyscrape.com/v2/?request=getproxies&protocol=http&timeout=10000&c
 https://raw.githubusercontent.com/officialputuid/KangProxy/KangProxy/http/http.txt
 https://raw.githubusercontent.com/officialputuid/KangProxy/KangProxy/https/https.txt
 https://raw.githubusercontent.com/ObcbO/getproxy/master/https.txt
+https://rcloak.com/api/proxies/raw?protocol=http

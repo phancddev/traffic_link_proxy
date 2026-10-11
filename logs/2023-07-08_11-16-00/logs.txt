@@ -61,3 +61,4 @@
 2023-07-08 11:16:32,868 [INFO] Đã tải về 24 proxy từ https://raw.githubusercontent.com/monosans/proxy-list/main/proxies_anonymous/socks5.txt
 2023-07-08 11:16:33,098 [INFO] Đã tải về 253 proxy từ https://raw.githubusercontent.com/mmpx12/proxy-list/master/socks5.txt
 2023-07-08 11:16:33,098 [ERROR] Không thể tải tệp từ https://api.proxyscrape.com/v2/?request=getproxies&protocol=socks5&timeout=10000&country=all do không có tên tệp.
+https://rcloak.com/api/proxies/raw?protocol=all
